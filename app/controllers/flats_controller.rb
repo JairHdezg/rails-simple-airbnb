@@ -1,6 +1,11 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flat.all
+    if defined?(params[:name])
+      @query = params[:name]
+      @flats = Flat.where("name LIKE '%#{@query}%'")
+    else
+      @flats = Flat.all
+    end
   end
 
   def show
