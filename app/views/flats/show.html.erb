@@ -1,0 +1,50 @@
+<div class="banner" style="background-image: url('<%= @flat.picture_url %>');">
+</div>
+<div class="container d-flex justify-content-between">
+  <div class="flat-info">
+    <div class="flat-details">
+      <h5 class="mx-2 my-2"><%= @flat.name %></h5>
+      <p class="m-2"><%= @flat.address %></p>
+    </div>
+    <div class="flat-map my-3">
+    </div>
+    <div class="flat-details my-2 p-3">
+      <h5>A bit more about this flat</h5>
+      <p class="text-justify"><%= @flat.description%></p>
+    </div>
+  </div>
+  <div class="flat-other">
+    <div class="flat-book">
+      <form>
+        <h5>Book now</h5>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">From</span>
+          </div>
+          <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">To</span>
+          </div>
+          <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-block">Book</button>
+      </form>
+    </div>
+    <div class="flat-details my-2">
+      <h5>Details</h5>
+      <div class="d-flex align-items-center card-icons ml-2">
+        <div class="d-flex align-items-center mr-4 text-secondary">
+          <i class="fas fa-user-friends mr-2 text-secondary"></i>
+          <span> <%= @flat.number_of_guests %></span>
+        </div>
+        <span class="font-weight-normal text-secondary">$   <%= @flat.price_per_night %></span>
+      </div>
+    </div>
+  </div>
+</div>
